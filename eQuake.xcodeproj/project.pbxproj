@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D76F589B1AB921C700664AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589A1AB921C700664AAC /* main.m */; };
+		D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589D1AB921C700664AAC /* AppDelegate.m */; };
+		D76F58A11AB921C700664AAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58A01AB921C700664AAC /* ViewController.m */; };
+		D76F58A41AB921C700664AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A21AB921C700664AAC /* Main.storyboard */; };
+		D76F58A61AB921C700664AAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A51AB921C700664AAC /* Images.xcassets */; };
+		D76F58A91AB921C700664AAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A71AB921C700664AAC /* LaunchScreen.xib */; };
+		D76F58B51AB921C700664AAC /* eQuakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58B41AB921C700664AAC /* eQuakeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D76F58AF1AB921C700664AAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76F588D1AB921C700664AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76F58941AB921C700664AAC;
+			remoteInfo = eQuake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D76F58951AB921C700664AAC /* eQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76F58991AB921C700664AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76F589A1AB921C700664AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D76F589C1AB921C700664AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D76F589D1AB921C700664AAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D76F589F1AB921C700664AAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D76F58A01AB921C700664AAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D76F58A31AB921C700664AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D76F58A51AB921C700664AAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D76F58A81AB921C700664AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D76F58AE1AB921C700664AAC /* eQuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eQuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76F58B31AB921C700664AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76F58B41AB921C700664AAC /* eQuakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eQuakeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D76F58921AB921C700664AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76F58AB1AB921C700664AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D76F588C1AB921C700664AAC = {
+			isa = PBXGroup;
+			children = (
+				D76F58971AB921C700664AAC /* eQuake */,
+				D76F58B11AB921C700664AAC /* eQuakeTests */,
+				D76F58961AB921C700664AAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D76F58961AB921C700664AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58951AB921C700664AAC /* eQuake.app */,
+				D76F58AE1AB921C700664AAC /* eQuakeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D76F58971AB921C700664AAC /* eQuake */ = {
+			isa = PBXGroup;
+			children = (
+				D76F589C1AB921C700664AAC /* AppDelegate.h */,
+				D76F589D1AB921C700664AAC /* AppDelegate.m */,
+				D76F589F1AB921C700664AAC /* ViewController.h */,
+				D76F58A01AB921C700664AAC /* ViewController.m */,
+				D76F58A21AB921C700664AAC /* Main.storyboard */,
+				D76F58A51AB921C700664AAC /* Images.xcassets */,
+				D76F58A71AB921C700664AAC /* LaunchScreen.xib */,
+				D76F58981AB921C700664AAC /* Supporting Files */,
+			);
+			path = eQuake;
+			sourceTree = "<group>";
+		};
+		D76F58981AB921C700664AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58991AB921C700664AAC /* Info.plist */,
+				D76F589A1AB921C700664AAC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D76F58B11AB921C700664AAC /* eQuakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58B41AB921C700664AAC /* eQuakeTests.m */,
+				D76F58B21AB921C700664AAC /* Supporting Files */,
+			);
+			path = eQuakeTests;
+			sourceTree = "<group>";
+		};
+		D76F58B21AB921C700664AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58B31AB921C700664AAC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D76F58941AB921C700664AAC /* eQuake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76F58B81AB921C700664AAC /* Build configuration list for PBXNativeTarget "eQuake" */;
+			buildPhases = (
+				D76F58911AB921C700664AAC /* Sources */,
+				D76F58921AB921C700664AAC /* Frameworks */,
+				D76F58931AB921C700664AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eQuake;
+			productName = eQuake;
+			productReference = D76F58951AB921C700664AAC /* eQuake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D76F58AD1AB921C700664AAC /* eQuakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76F58BB1AB921C700664AAC /* Build configuration list for PBXNativeTarget "eQuakeTests" */;
+			buildPhases = (
+				D76F58AA1AB921C700664AAC /* Sources */,
+				D76F58AB1AB921C700664AAC /* Frameworks */,
+				D76F58AC1AB921C700664AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D76F58B01AB921C700664AAC /* PBXTargetDependency */,
+			);
+			name = eQuakeTests;
+			productName = eQuakeTests;
+			productReference = D76F58AE1AB921C700664AAC /* eQuakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D76F588D1AB921C700664AAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = cagide;
+				TargetAttributes = {
+					D76F58941AB921C700664AAC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					D76F58AD1AB921C700664AAC = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = D76F58941AB921C700664AAC;
+					};
+				};
+			};
+			buildConfigurationList = D76F58901AB921C700664AAC /* Build configuration list for PBXProject "eQuake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D76F588C1AB921C700664AAC;
+			productRefGroup = D76F58961AB921C700664AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D76F58941AB921C700664AAC /* eQuake */,
+				D76F58AD1AB921C700664AAC /* eQuakeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D76F58931AB921C700664AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76F58A41AB921C700664AAC /* Main.storyboard in Resources */,
+				D76F58A91AB921C700664AAC /* LaunchScreen.xib in Resources */,
+				D76F58A61AB921C700664AAC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76F58AC1AB921C700664AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D76F58911AB921C700664AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76F58A11AB921C700664AAC /* ViewController.m in Sources */,
+				D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */,
+				D76F589B1AB921C700664AAC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76F58AA1AB921C700664AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76F58B51AB921C700664AAC /* eQuakeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D76F58B01AB921C700664AAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D76F58941AB921C700664AAC /* eQuake */;
+			targetProxy = D76F58AF1AB921C700664AAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D76F58A21AB921C700664AAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D76F58A31AB921C700664AAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D76F58A71AB921C700664AAC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D76F58A81AB921C700664AAC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D76F58B61AB921C700664AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D76F58B71AB921C700664AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D76F58B91AB921C700664AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = eQuake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D76F58BA1AB921C700664AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = eQuake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D76F58BC1AB921C700664AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eQuakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eQuake.app/eQuake";
+			};
+			name = Debug;
+		};
+		D76F58BD1AB921C700664AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eQuakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eQuake.app/eQuake";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D76F58901AB921C700664AAC /* Build configuration list for PBXProject "eQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76F58B61AB921C700664AAC /* Debug */,
+				D76F58B71AB921C700664AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D76F58B81AB921C700664AAC /* Build configuration list for PBXNativeTarget "eQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76F58B91AB921C700664AAC /* Debug */,
+				D76F58BA1AB921C700664AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D76F58BB1AB921C700664AAC /* Build configuration list for PBXNativeTarget "eQuakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76F58BC1AB921C700664AAC /* Debug */,
+				D76F58BD1AB921C700664AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D76F588D1AB921C700664AAC /* Project object */;
+}
