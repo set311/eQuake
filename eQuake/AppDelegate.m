@@ -8,11 +8,13 @@
 
 #import "AppDelegate.h"
 #import "EarthQuakeList.h"
+#import "EarthQuakeBusinessController.h"
 
 @interface AppDelegate ()
 
 @property(nonatomic,strong)UINavigationController* navigationController;
 @property(nonatomic,strong)EarthQuakeList* earthQuakeList;
+@property(nonatomic,strong)EarthQuakeBusinessController* earthQuakeBusinessController;
 
 @end
 
@@ -23,7 +25,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.earthQuakeList = [EarthQuakeList new];
+    self.earthQuakeBusinessController = [EarthQuakeBusinessController new];
     
+    [self.earthQuakeList setDelegate:self.earthQuakeBusinessController];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.earthQuakeList];
     
     [self.window setRootViewController:self.navigationController];

@@ -14,12 +14,21 @@
 
 @end
 
-
 @implementation EarthQuakeCellTableViewCell
 
 - (void)awakeFromNib {
+
 }
 
-
+-(void)reloadData
+{
+    [self.location setText:[self.earthQuake valueForKeyPath:@"properties.place"]];
+    
+    [self.magnitud setText:[NSString stringWithFormat: @"%0.2f",
+                            [[self.earthQuake valueForKeyPath:@"properties.mag"] floatValue]]];
+    
+    [self.magnitudIndicator setBackgroundColor:self.magnitudColor];
+    [self.magnitudIndicator.layer setCornerRadius:10];
+}
 
 @end

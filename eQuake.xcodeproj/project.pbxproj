@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07F1070C6319D29A2EB92DED /* libPods-eQuake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C2B063ED3DE9BB22BAF09F /* libPods-eQuake.a */; };
 		D76F589B1AB921C700664AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589A1AB921C700664AAC /* main.m */; };
 		D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589D1AB921C700664AAC /* AppDelegate.m */; };
 		D76F58A61AB921C700664AAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A51AB921C700664AAC /* Images.xcassets */; };
@@ -16,6 +17,9 @@
 		D76F58C61AB9239300664AAC /* EarthQuakeList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58C41AB9239300664AAC /* EarthQuakeList.xib */; };
 		D76F58CB1AB924E200664AAC /* EarthQuakeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58C91AB924E200664AAC /* EarthQuakeCellTableViewCell.m */; };
 		D76F58CC1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58CA1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib */; };
+		D76F58D21AB92DC600664AAC /* ColorMagnitudServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58D01AB92DC600664AAC /* ColorMagnitudServices.m */; };
+		D76F58D61AB92E4C00664AAC /* EarthQuakeBusinessController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58D51AB92E4C00664AAC /* EarthQuakeBusinessController.m */; };
+		D76F58DB1AB9371800664AAC /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58DA1AB9371800664AAC /* UIView+ColorOfPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13C2B063ED3DE9BB22BAF09F /* libPods-eQuake.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eQuake.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76F58951AB921C700664AAC /* eQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76F58991AB921C700664AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D76F589A1AB921C700664AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +50,16 @@
 		D76F58C81AB924E200664AAC /* EarthQuakeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthQuakeCellTableViewCell.h; sourceTree = "<group>"; };
 		D76F58C91AB924E200664AAC /* EarthQuakeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthQuakeCellTableViewCell.m; sourceTree = "<group>"; };
 		D76F58CA1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarthQuakeCellTableViewCell.xib; sourceTree = "<group>"; };
+		D76F58CF1AB92DC600664AAC /* ColorMagnitudServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMagnitudServices.h; sourceTree = "<group>"; };
+		D76F58D01AB92DC600664AAC /* ColorMagnitudServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorMagnitudServices.m; sourceTree = "<group>"; };
+		D76F58D11AB92DC600664AAC /* IColorMagnitudServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IColorMagnitudServices.h; sourceTree = "<group>"; };
+		D76F58D41AB92E4C00664AAC /* EarthQuakeBusinessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthQuakeBusinessController.h; sourceTree = "<group>"; };
+		D76F58D51AB92E4C00664AAC /* EarthQuakeBusinessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthQuakeBusinessController.m; sourceTree = "<group>"; };
+		D76F58D81AB933B600664AAC /* IEarthQuakeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEarthQuakeDelegate.h; sourceTree = "<group>"; };
+		D76F58D91AB9371800664AAC /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
+		D76F58DA1AB9371800664AAC /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
+		D9A49F892744DC5242692669 /* Pods-eQuake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eQuake.release.xcconfig"; path = "Pods/Target Support Files/Pods-eQuake/Pods-eQuake.release.xcconfig"; sourceTree = "<group>"; };
+		E45F3E3EF56144B35CA5CE52 /* Pods-eQuake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eQuake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eQuake/Pods-eQuake.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F1070C6319D29A2EB92DED /* libPods-eQuake.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		960A7F1C72A5D8101933F6C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E45F3E3EF56144B35CA5CE52 /* Pods-eQuake.debug.xcconfig */,
+				D9A49F892744DC5242692669 /* Pods-eQuake.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D76F588C1AB921C700664AAC = {
 			isa = PBXGroup;
 			children = (
 				D76F58971AB921C700664AAC /* eQuake */,
 				D76F58B11AB921C700664AAC /* eQuakeTests */,
 				D76F58961AB921C700664AAC /* Products */,
+				960A7F1C72A5D8101933F6C6 /* Pods */,
+				E7C765EE8FD642F0230F4BC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +153,8 @@
 		D76F58BE1AB9232F00664AAC /* QuakeList */ = {
 			isa = PBXGroup;
 			children = (
+				D76F58D31AB92DE500664AAC /* BusinessController */,
+				D76F58CD1AB92D9F00664AAC /* Services */,
 				D76F58C01AB9235B00664AAC /* ViewController */,
 			);
 			name = QuakeList;
@@ -142,6 +171,8 @@
 		D76F58C01AB9235B00664AAC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D76F58D71AB9337E00664AAC /* Protocols */,
+				D76F58CE1AB92DB100664AAC /* Services  */,
 				D76F58C71AB924A600664AAC /* Artifacts */,
 				D76F58C21AB9239300664AAC /* EarthQuakeList.h */,
 				D76F58C31AB9239300664AAC /* EarthQuakeList.m */,
@@ -167,6 +198,50 @@
 			name = Artifacts;
 			sourceTree = "<group>";
 		};
+		D76F58CD1AB92D9F00664AAC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		D76F58CE1AB92DB100664AAC /* Services  */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58D91AB9371800664AAC /* UIView+ColorOfPoint.h */,
+				D76F58DA1AB9371800664AAC /* UIView+ColorOfPoint.m */,
+				D76F58CF1AB92DC600664AAC /* ColorMagnitudServices.h */,
+				D76F58D01AB92DC600664AAC /* ColorMagnitudServices.m */,
+				D76F58D11AB92DC600664AAC /* IColorMagnitudServices.h */,
+			);
+			name = "Services ";
+			sourceTree = "<group>";
+		};
+		D76F58D31AB92DE500664AAC /* BusinessController */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58D41AB92E4C00664AAC /* EarthQuakeBusinessController.h */,
+				D76F58D51AB92E4C00664AAC /* EarthQuakeBusinessController.m */,
+			);
+			name = BusinessController;
+			sourceTree = "<group>";
+		};
+		D76F58D71AB9337E00664AAC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58D81AB933B600664AAC /* IEarthQuakeDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E7C765EE8FD642F0230F4BC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13C2B063ED3DE9BB22BAF09F /* libPods-eQuake.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D76F58B81AB921C700664AAC /* Build configuration list for PBXNativeTarget "eQuake" */;
 			buildPhases = (
+				83AB390A66D27B17991B27DB /* Check Pods Manifest.lock */,
 				D76F58911AB921C700664AAC /* Sources */,
 				D76F58921AB921C700664AAC /* Frameworks */,
 				D76F58931AB921C700664AAC /* Resources */,
+				FF487C6C66F8A17E7DA26D3E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +340,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83AB390A66D27B17991B27DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF487C6C66F8A17E7DA26D3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eQuake/Pods-eQuake-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D76F58911AB921C700664AAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -270,7 +380,10 @@
 			files = (
 				D76F58C51AB9239300664AAC /* EarthQuakeList.m in Sources */,
 				D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */,
+				D76F58D61AB92E4C00664AAC /* EarthQuakeBusinessController.m in Sources */,
 				D76F58CB1AB924E200664AAC /* EarthQuakeCellTableViewCell.m in Sources */,
+				D76F58DB1AB9371800664AAC /* UIView+ColorOfPoint.m in Sources */,
+				D76F58D21AB92DC600664AAC /* ColorMagnitudServices.m in Sources */,
 				D76F589B1AB921C700664AAC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +496,7 @@
 		};
 		D76F58B91AB921C700664AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E45F3E3EF56144B35CA5CE52 /* Pods-eQuake.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = eQuake/Info.plist;
@@ -393,6 +507,7 @@
 		};
 		D76F58BA1AB921C700664AAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A49F892744DC5242692669 /* Pods-eQuake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = eQuake/Info.plist;
@@ -454,6 +569,7 @@
 				D76F58BA1AB921C700664AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D76F58BB1AB921C700664AAC /* Build configuration list for PBXNativeTarget "eQuakeTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +578,7 @@
 				D76F58BD1AB921C700664AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

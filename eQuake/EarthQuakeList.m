@@ -8,10 +8,13 @@
 
 #import "EarthQuakeList.h"
 #import "EarthQuakeCellTableViewCell.h"
+#import "ColorMagnitudServices.h"
 
 #define cellName @"EarthQuakeCellTableViewCell"
 
 @interface EarthQuakeList ()
+
+@property(nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -20,19 +23,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    self.magnitudColorServices = [ColorMagnitudServices new];
+    
     self.title = @"Earth Quakes";
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
-    self.earthQuakes = @[@"1", @"2", @"3"];
     
     UINib * nib = [UINib nibWithNibName:cellName bundle: nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:cellName];
+    
+    [self reloadData];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    EarthQuakeCellTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    
+    id earthQuakeModel = self.earthQuakes[(NSUInteger) indexPath.row];
+    [cell setEarthQuake:earthQuakeModel];
+    float magnitud = [[earthQuakeModel valueForKeyPath:@"properties.mag"] floatValue];
+    [cell setMagnitudColor: [self.magnitudColorServices getColorForMagnitude: magnitud]];
+    
+    [cell reloadData];
     return cell;
 }
 
@@ -52,10 +68,13 @@
     
 }
 
-- (void) reloadData
+- (void)reloadData
 {
-    [self.tableView reloadData];
+    [self.delegate loadEarthquakesInformationWithCallback:^(NSArray * earthquakes) {
+        self.earthQuakes = earthquakes;
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    }];
 }
-
 
 @end
