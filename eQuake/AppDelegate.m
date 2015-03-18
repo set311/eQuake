@@ -7,16 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import "EarthQuakeList.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic,strong)UINavigationController* navigationController;
+@property(nonatomic,strong)EarthQuakeList* earthQuakeList;
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.earthQuakeList = [EarthQuakeList new];
+    
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.earthQuakeList];
+    
+    [self.window setRootViewController:self.navigationController];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		D76F589B1AB921C700664AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589A1AB921C700664AAC /* main.m */; };
 		D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589D1AB921C700664AAC /* AppDelegate.m */; };
-		D76F58A11AB921C700664AAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58A01AB921C700664AAC /* ViewController.m */; };
-		D76F58A41AB921C700664AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A21AB921C700664AAC /* Main.storyboard */; };
 		D76F58A61AB921C700664AAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A51AB921C700664AAC /* Images.xcassets */; };
 		D76F58A91AB921C700664AAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A71AB921C700664AAC /* LaunchScreen.xib */; };
 		D76F58B51AB921C700664AAC /* eQuakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58B41AB921C700664AAC /* eQuakeTests.m */; };
+		D76F58C51AB9239300664AAC /* EarthQuakeList.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58C31AB9239300664AAC /* EarthQuakeList.m */; };
+		D76F58C61AB9239300664AAC /* EarthQuakeList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58C41AB9239300664AAC /* EarthQuakeList.xib */; };
+		D76F58CB1AB924E200664AAC /* EarthQuakeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58C91AB924E200664AAC /* EarthQuakeCellTableViewCell.m */; };
+		D76F58CC1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58CA1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,17 @@
 		D76F589A1AB921C700664AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D76F589C1AB921C700664AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D76F589D1AB921C700664AAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D76F589F1AB921C700664AAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D76F58A01AB921C700664AAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D76F58A31AB921C700664AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D76F58A51AB921C700664AAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D76F58A81AB921C700664AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D76F58AE1AB921C700664AAC /* eQuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eQuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76F58B31AB921C700664AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D76F58B41AB921C700664AAC /* eQuakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eQuakeTests.m; sourceTree = "<group>"; };
+		D76F58C21AB9239300664AAC /* EarthQuakeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthQuakeList.h; sourceTree = "<group>"; };
+		D76F58C31AB9239300664AAC /* EarthQuakeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthQuakeList.m; sourceTree = "<group>"; };
+		D76F58C41AB9239300664AAC /* EarthQuakeList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarthQuakeList.xib; sourceTree = "<group>"; };
+		D76F58C81AB924E200664AAC /* EarthQuakeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthQuakeCellTableViewCell.h; sourceTree = "<group>"; };
+		D76F58C91AB924E200664AAC /* EarthQuakeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthQuakeCellTableViewCell.m; sourceTree = "<group>"; };
+		D76F58CA1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarthQuakeCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +86,10 @@
 		D76F58971AB921C700664AAC /* eQuake */ = {
 			isa = PBXGroup;
 			children = (
+				D76F58BF1AB9234000664AAC /* QuakeDetail */,
+				D76F58BE1AB9232F00664AAC /* QuakeList */,
 				D76F589C1AB921C700664AAC /* AppDelegate.h */,
 				D76F589D1AB921C700664AAC /* AppDelegate.m */,
-				D76F589F1AB921C700664AAC /* ViewController.h */,
-				D76F58A01AB921C700664AAC /* ViewController.m */,
-				D76F58A21AB921C700664AAC /* Main.storyboard */,
 				D76F58A51AB921C700664AAC /* Images.xcassets */,
 				D76F58A71AB921C700664AAC /* LaunchScreen.xib */,
 				D76F58981AB921C700664AAC /* Supporting Files */,
@@ -117,6 +121,50 @@
 				D76F58B31AB921C700664AAC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D76F58BE1AB9232F00664AAC /* QuakeList */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58C01AB9235B00664AAC /* ViewController */,
+			);
+			name = QuakeList;
+			sourceTree = "<group>";
+		};
+		D76F58BF1AB9234000664AAC /* QuakeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58C11AB9236300664AAC /* ViewController */,
+			);
+			name = QuakeDetail;
+			sourceTree = "<group>";
+		};
+		D76F58C01AB9235B00664AAC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58C71AB924A600664AAC /* Artifacts */,
+				D76F58C21AB9239300664AAC /* EarthQuakeList.h */,
+				D76F58C31AB9239300664AAC /* EarthQuakeList.m */,
+				D76F58C41AB9239300664AAC /* EarthQuakeList.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D76F58C11AB9236300664AAC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D76F58C71AB924A600664AAC /* Artifacts */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58C81AB924E200664AAC /* EarthQuakeCellTableViewCell.h */,
+				D76F58C91AB924E200664AAC /* EarthQuakeCellTableViewCell.m */,
+				D76F58CA1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib */,
+			);
+			name = Artifacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76F58A41AB921C700664AAC /* Main.storyboard in Resources */,
 				D76F58A91AB921C700664AAC /* LaunchScreen.xib in Resources */,
 				D76F58A61AB921C700664AAC /* Images.xcassets in Resources */,
+				D76F58CC1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib in Resources */,
+				D76F58C61AB9239300664AAC /* EarthQuakeList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76F58A11AB921C700664AAC /* ViewController.m in Sources */,
+				D76F58C51AB9239300664AAC /* EarthQuakeList.m in Sources */,
 				D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */,
+				D76F58CB1AB924E200664AAC /* EarthQuakeCellTableViewCell.m in Sources */,
 				D76F589B1AB921C700664AAC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +294,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D76F58A21AB921C700664AAC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D76F58A31AB921C700664AAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D76F58A71AB921C700664AAC /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
