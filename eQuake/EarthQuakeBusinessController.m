@@ -8,6 +8,10 @@
 
 #import "EarthQuakeBusinessController.h"
 #import "GeoJSONSerialization.h"
+#import "MKPointAnnotation+CustomColor.h"
+#import "ColorMagnitudServices.h"
+#import "DetailEarthQuakeViewController.h"
+
 
 #define url @"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
 
@@ -19,6 +23,10 @@
 @property(nonatomic, strong) dispatch_queue_t queue;
 @property(nonatomic, copy) NSString *tempPath;
 
+@property(nonatomic, strong) ColorMagnitudServices *magnitudColor;
+
+@property(nonatomic, strong) DetailEarthQuakeViewController *detailView;
+
 @end
 
 @implementation EarthQuakeBusinessController
@@ -28,6 +36,10 @@
     if (self) {
         self.queue = dispatch_queue_create("Earthquakes", DISPATCH_QUEUE_CONCURRENT);
         self.tempPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"/all_hour.geojson"];
+        
+        self.magnitudColor = [ColorMagnitudServices new];
+        self.detailView = [DetailEarthQuakeViewController new];
+        [self.detailView setDelegate:self];
     }
     return self;
 }
@@ -64,6 +76,35 @@
     });
 }
 
+
+- (void)getMapInformationForEarthquake:(id)earthquakeModel withCallback:(void (^)(id))shapeCallback {
+    dispatch_barrier_async(self.queue, ^{
+        NSUInteger indexOfObject = [self.geoJSON[@"features"] indexOfObject:earthquakeModel];
+        MKPointAnnotation * shape = [self.shapes count] > indexOfObject ? self.shapes[indexOfObject] : nil;
+        shape.customColor = [self.magnitudColor getColorForMagnitude: [self getMagnitudeFromModel:earthquakeModel]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            shapeCallback(shape);
+        });
+    });
+}
+
+- (void) getMapInformationWithEarthquakesUsingCallback: (void (^)(id))shapeCallback {
+    for(id earthquakeModel in self.geoJSON[@"features"]) {
+        [self getMapInformationForEarthquake: earthquakeModel withCallback:shapeCallback];
+    }
+}
+
+- (float)getMagnitudeFromModel: (id) model{
+    return [[model valueForKeyPath:@"properties.mag"] floatValue];
+}
+
+
+-(UIViewController*)nextViewControllerWithModel:(id) model
+{
+    [self.detailView setEarthQuake:model];
+    return self.detailView;
+}
 
 
 @end

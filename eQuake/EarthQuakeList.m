@@ -59,13 +59,12 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self cmdEarthQuakeSelected];
+    [self cmdEarthQuakeSelected:indexPath.row];
 }
 
-
--(void)cmdEarthQuakeSelected
+-(void)cmdEarthQuakeSelected:(NSInteger)index
 {
-    
+    [self.navigationController pushViewController:[self.delegate nextViewControllerWithModel:self.earthQuakes[index]] animated:YES];
 }
 
 - (void)reloadData

@@ -17,7 +17,6 @@
 @property (nonatomic, weak) id<IEarthquakesDataSource> delegate;
 @property (nonatomic, strong) id<IColorMagnitudServices> magnitudColorServices;
 
-
 - (void)reloadData;
 
 @end

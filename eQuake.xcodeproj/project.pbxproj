@@ -20,6 +20,11 @@
 		D76F58D21AB92DC600664AAC /* ColorMagnitudServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58D01AB92DC600664AAC /* ColorMagnitudServices.m */; };
 		D76F58D61AB92E4C00664AAC /* EarthQuakeBusinessController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58D51AB92E4C00664AAC /* EarthQuakeBusinessController.m */; };
 		D76F58DB1AB9371800664AAC /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58DA1AB9371800664AAC /* UIView+ColorOfPoint.m */; };
+		D76F58DF1AB9445600664AAC /* DetailEarthQuakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58DD1AB9445500664AAC /* DetailEarthQuakeViewController.m */; };
+		D76F58E01AB9445600664AAC /* DetailEarthQuakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76F58DE1AB9445600664AAC /* DetailEarthQuakeViewController.xib */; };
+		D76F58E21AB948FF00664AAC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76F58E11AB948FF00664AAC /* MapKit.framework */; };
+		D76F58E81AB94AF800664AAC /* MKPointAnnotation+CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58E51AB94AF800664AAC /* MKPointAnnotation+CustomColor.m */; };
+		D76F58E91AB94AF800664AAC /* ZSPinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F58E71AB94AF800664AAC /* ZSPinAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,15 @@
 		D76F58D81AB933B600664AAC /* IEarthQuakeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEarthQuakeDelegate.h; sourceTree = "<group>"; };
 		D76F58D91AB9371800664AAC /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
 		D76F58DA1AB9371800664AAC /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
+		D76F58DC1AB9445500664AAC /* DetailEarthQuakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailEarthQuakeViewController.h; sourceTree = "<group>"; };
+		D76F58DD1AB9445500664AAC /* DetailEarthQuakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailEarthQuakeViewController.m; sourceTree = "<group>"; };
+		D76F58DE1AB9445600664AAC /* DetailEarthQuakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailEarthQuakeViewController.xib; sourceTree = "<group>"; };
+		D76F58E11AB948FF00664AAC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D76F58E41AB94AF800664AAC /* MKPointAnnotation+CustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPointAnnotation+CustomColor.h"; sourceTree = "<group>"; };
+		D76F58E51AB94AF800664AAC /* MKPointAnnotation+CustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPointAnnotation+CustomColor.m"; sourceTree = "<group>"; };
+		D76F58E61AB94AF800664AAC /* ZSPinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPinAnnotation.h; sourceTree = "<group>"; };
+		D76F58E71AB94AF800664AAC /* ZSPinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSPinAnnotation.m; sourceTree = "<group>"; };
+		D76F58EB1AB94F5800664AAC /* IDetailDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDetailDelegate.h; sourceTree = "<group>"; };
 		D9A49F892744DC5242692669 /* Pods-eQuake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eQuake.release.xcconfig"; path = "Pods/Target Support Files/Pods-eQuake/Pods-eQuake.release.xcconfig"; sourceTree = "<group>"; };
 		E45F3E3EF56144B35CA5CE52 /* Pods-eQuake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eQuake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eQuake/Pods-eQuake.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76F58E21AB948FF00664AAC /* MapKit.framework in Frameworks */,
 				07F1070C6319D29A2EB92DED /* libPods-eQuake.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +199,11 @@
 		D76F58C11AB9236300664AAC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D76F58EA1AB94F3600664AAC /* Protocols */,
+				D76F58E31AB94ADE00664AAC /* Artifacts */,
+				D76F58DC1AB9445500664AAC /* DetailEarthQuakeViewController.h */,
+				D76F58DD1AB9445500664AAC /* DetailEarthQuakeViewController.m */,
+				D76F58DE1AB9445600664AAC /* DetailEarthQuakeViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -234,9 +254,29 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		D76F58E31AB94ADE00664AAC /* Artifacts */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58E41AB94AF800664AAC /* MKPointAnnotation+CustomColor.h */,
+				D76F58E51AB94AF800664AAC /* MKPointAnnotation+CustomColor.m */,
+				D76F58E61AB94AF800664AAC /* ZSPinAnnotation.h */,
+				D76F58E71AB94AF800664AAC /* ZSPinAnnotation.m */,
+			);
+			name = Artifacts;
+			sourceTree = "<group>";
+		};
+		D76F58EA1AB94F3600664AAC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D76F58EB1AB94F5800664AAC /* IDetailDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		E7C765EE8FD642F0230F4BC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D76F58E11AB948FF00664AAC /* MapKit.framework */,
 				13C2B063ED3DE9BB22BAF09F /* libPods-eQuake.a */,
 			);
 			name = Frameworks;
@@ -325,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76F58A91AB921C700664AAC /* LaunchScreen.xib in Resources */,
+				D76F58E01AB9445600664AAC /* DetailEarthQuakeViewController.xib in Resources */,
 				D76F58A61AB921C700664AAC /* Images.xcassets in Resources */,
 				D76F58CC1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib in Resources */,
 				D76F58C61AB9239300664AAC /* EarthQuakeList.xib in Resources */,
@@ -378,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76F58DF1AB9445600664AAC /* DetailEarthQuakeViewController.m in Sources */,
 				D76F58C51AB9239300664AAC /* EarthQuakeList.m in Sources */,
 				D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */,
 				D76F58D61AB92E4C00664AAC /* EarthQuakeBusinessController.m in Sources */,
@@ -385,6 +427,8 @@
 				D76F58DB1AB9371800664AAC /* UIView+ColorOfPoint.m in Sources */,
 				D76F58D21AB92DC600664AAC /* ColorMagnitudServices.m in Sources */,
 				D76F589B1AB921C700664AAC /* main.m in Sources */,
+				D76F58E81AB94AF800664AAC /* MKPointAnnotation+CustomColor.m in Sources */,
+				D76F58E91AB94AF800664AAC /* ZSPinAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol IEarthquakesDataSource <NSObject>
 
 - (void)loadEarthquakesInformationWithCallback:(void (^)(NSArray *))earthQuakesInformation;
+
+-(UIViewController*)nextViewControllerWithModel:(id) model;
 
 @end

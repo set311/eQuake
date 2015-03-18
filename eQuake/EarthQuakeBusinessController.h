@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "IEarthQuakeDelegate.h"
+#import "IDetailDelegate.h"
 
-@interface EarthQuakeBusinessController : NSObject<IEarthquakesDataSource>
+@interface EarthQuakeBusinessController : NSObject<IEarthquakesDataSource, IDetailDelegate>
 
+- (float)getMagnitudeFromModel: (id) model;
 
 
 @end
