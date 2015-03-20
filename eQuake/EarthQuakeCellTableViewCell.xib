@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,37 +14,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="California" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PH-bu-2VW" userLabel="Location">
-                        <rect key="frame" x="18" y="9" width="174" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="California" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PH-bu-2VW" userLabel="Location">
+                        <rect key="frame" x="18" y="11" width="234" height="42"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25/08/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WR2-eC-YIP" userLabel="Date ">
-                        <rect key="frame" x="18" y="33" width="174" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4.6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yj-5P-CXf" userLabel="Magnitud">
+                        <rect key="frame" x="260" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yj-5P-CXf" userLabel="Magnitud">
-                        <rect key="frame" x="264" y="9" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-md-c7q">
-                        <rect key="frame" x="285" y="33" width="20" height="20"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-md-c7q" userLabel="indicator">
+                        <rect key="frame" x="287" y="33" width="15" height="15"/>
                         <color key="backgroundColor" red="1" green="0.43413634969999998" blue="0.2281267364" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <view alpha="0.19999999999999968" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gos-vZ-eoa" userLabel="line">
+                        <rect key="frame" x="18" y="60" width="302" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="gos-vZ-eoa" firstAttribute="top" secondItem="7PH-bu-2VW" secondAttribute="bottom" constant="7" id="2fH-Kw-IEf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gos-vZ-eoa" secondAttribute="trailing" constant="-8" id="4Q8-kw-VXU"/>
+                    <constraint firstAttribute="bottom" secondItem="gos-vZ-eoa" secondAttribute="bottom" id="6fh-ql-CDi"/>
+                    <constraint firstItem="gos-vZ-eoa" firstAttribute="leading" secondItem="7PH-bu-2VW" secondAttribute="leading" id="9Ny-NR-Kjz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Kbk-md-c7q" secondAttribute="trailing" constant="10" id="Ice-hq-Vnv"/>
+                    <constraint firstItem="7PH-bu-2VW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="Lfk-AO-Llu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5yj-5P-CXf" secondAttribute="trailing" constant="10" id="ROm-Pv-jJf"/>
+                    <constraint firstItem="gos-vZ-eoa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="ids-Mn-CvI"/>
+                    <constraint firstItem="7PH-bu-2VW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="q0n-k1-Ry9"/>
+                    <constraint firstItem="5yj-5P-CXf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="sWv-mT-gRw"/>
+                    <constraint firstItem="Kbk-md-c7q" firstAttribute="top" secondItem="5yj-5P-CXf" secondAttribute="bottom" constant="2" id="yra-s2-muO"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="date" destination="WR2-eC-YIP" id="jFf-v6-92Y"/>
                 <outlet property="location" destination="7PH-bu-2VW" id="sWW-I5-LB3"/>
                 <outlet property="magnitud" destination="5yj-5P-CXf" id="Nc4-Xv-GTL"/>
                 <outlet property="magnitudIndicator" destination="Kbk-md-c7q" id="JMY-BL-16u"/>
             </connections>
-            <point key="canvasLocation" x="254" y="354"/>
+            <point key="canvasLocation" x="254" y="349"/>
         </tableViewCell>
     </objects>
 </document>

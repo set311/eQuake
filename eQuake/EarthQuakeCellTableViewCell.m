@@ -28,7 +28,7 @@
                             [[self.earthQuake valueForKeyPath:@"properties.mag"] floatValue]]];
     
     [self.magnitudIndicator setBackgroundColor:self.magnitudColor];
-    [self.magnitudIndicator.layer setCornerRadius:10];
+    [self.magnitudIndicator.layer setCornerRadius:7];
 }
 
 @end
