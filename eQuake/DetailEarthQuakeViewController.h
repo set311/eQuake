@@ -13,6 +13,7 @@
 @interface DetailEarthQuakeViewController : UIViewController<MKMapViewDelegate>
 
 @property(nonatomic, weak)IBOutlet MKMapView * mapView;
+@property(nonatomic, weak)IBOutlet UIView * magnitudeIndicator;
 @property(nonatomic, weak)id<IDetailDelegate> delegate;
 @property(nonatomic, strong) id earthQuake;
 

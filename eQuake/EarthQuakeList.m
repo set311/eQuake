@@ -48,6 +48,7 @@
     float magnitud = [[earthQuakeModel valueForKeyPath:@"properties.mag"] floatValue];
     [cell setMagnitudColor: [self.magnitudColorServices getColorForMagnitude: magnitud]];
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell reloadData];
     return cell;
 }
@@ -60,6 +61,8 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self cmdEarthQuakeSelected:indexPath.row];
+    
+    
 }
 
 -(void)cmdEarthQuakeSelected:(NSInteger)index

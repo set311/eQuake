@@ -19,6 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.magnitudeIndicator.layer setCornerRadius:30];
+    [self.magnitudeIndicator.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.magnitudeIndicator.layer setShadowOpacity:0.7];
+    [self.magnitudeIndicator.layer setShadowRadius:3.0];
+    [self.magnitudeIndicator.layer setShadowOffset:CGSizeMake(1.0, 1.0)];
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
