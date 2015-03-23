@@ -27,6 +27,9 @@
 
 @property(nonatomic, strong) DetailEarthQuakeViewController *detailView;
 
+@property(nonatomic, strong) NSDateFormatter *dayFormat;
+@property(nonatomic, strong) NSDateFormatter *timeFormat;
+
 @end
 
 @implementation EarthQuakeBusinessController
@@ -40,8 +43,51 @@
         self.magnitudColor = [ColorMagnitudServices new];
         self.detailView = [DetailEarthQuakeViewController new];
         [self.detailView setDelegate:self];
+        
+        self.dayFormat = [[NSDateFormatter alloc] init];
+        [self.dayFormat setDateFormat:@"MM/dd/yyyy"];
+        
+        self.timeFormat = [[NSDateFormatter alloc] init];
+        [self.timeFormat setDateFormat:@"HH:mm"];
+
+        
     }
     return self;
+}
+
+- (void)loadURL:(NSString*)theURL withCallback:(void (^)(NSArray*))earthQuakesDetail {
+
+    dispatch_barrier_async(self.queue, ^{
+        NSError * error = nil;
+        NSData * data = [NSData dataWithContentsOfURL:[[NSURL alloc] initWithString:theURL] options:nil error:&error];
+    
+        if(data) {
+            NSError * interpretationError = nil;
+            self.geoJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&interpretationError];
+        
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                double timeValue = [self.geoJSON[@"properties"][@"time"] doubleValue];
+                               
+                NSDate * completeDate = [NSDate dateWithTimeIntervalSince1970: (timeValue / 1000)];
+                
+                NSString* date =[self.dayFormat stringFromDate:completeDate];
+                
+                NSString* time =[self.timeFormat stringFromDate:completeDate];
+;
+                NSArray* details = @[
+                                     @{@"key":@"Time",
+                                       @"value":time},
+                                     @{@"key":@"Date",
+                                       @"value":date},
+                                     @{@"key":@"Place",
+                                       @"value":self.geoJSON[@"properties"][@"place"]}
+                                     ];
+                
+                    earthQuakesDetail(details);
+                    });
+                }
+    });
 }
 
 - (void)loadEarthquakesInformationWithCallback:(void (^)(NSArray *))earthQuakesInformation {
@@ -103,8 +149,14 @@
 -(UIViewController*)nextViewControllerWithModel:(id) model
 {
     [self.detailView setEarthQuake:model];
+
+    
     return self.detailView;
 }
 
+-(UIColor *) getColorForMagnitude: (float) magnitude
+{
+    return  [self.magnitudColor getColorForMagnitude:magnitude];
+}
 
 @end

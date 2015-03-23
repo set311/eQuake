@@ -15,4 +15,6 @@
 
 -(UIViewController*)nextViewControllerWithModel:(id) model;
 
+-(UIColor *) getColorForMagnitude: (float) magnitude;
+
 @end

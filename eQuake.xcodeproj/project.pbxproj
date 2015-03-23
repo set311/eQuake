@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07F1070C6319D29A2EB92DED /* libPods-eQuake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C2B063ED3DE9BB22BAF09F /* libPods-eQuake.a */; };
+		D76C664D1ABF98C300CBC10F /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C664B1ABF98C300CBC10F /* DetailCell.m */; };
+		D76C664E1ABF98C300CBC10F /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76C664C1ABF98C300CBC10F /* DetailCell.xib */; };
 		D76F589B1AB921C700664AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589A1AB921C700664AAC /* main.m */; };
 		D76F589E1AB921C700664AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F589D1AB921C700664AAC /* AppDelegate.m */; };
 		D76F58A61AB921C700664AAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76F58A51AB921C700664AAC /* Images.xcassets */; };
@@ -39,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		13C2B063ED3DE9BB22BAF09F /* libPods-eQuake.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eQuake.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76C664A1ABF98C300CBC10F /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		D76C664B1ABF98C300CBC10F /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		D76C664C1ABF98C300CBC10F /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		D76F58951AB921C700664AAC /* eQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76F58991AB921C700664AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D76F589A1AB921C700664AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -261,6 +266,9 @@
 				D76F58E51AB94AF800664AAC /* MKPointAnnotation+CustomColor.m */,
 				D76F58E61AB94AF800664AAC /* ZSPinAnnotation.h */,
 				D76F58E71AB94AF800664AAC /* ZSPinAnnotation.m */,
+				D76C664A1ABF98C300CBC10F /* DetailCell.h */,
+				D76C664B1ABF98C300CBC10F /* DetailCell.m */,
+				D76C664C1ABF98C300CBC10F /* DetailCell.xib */,
 			);
 			name = Artifacts;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 			files = (
 				D76F58A91AB921C700664AAC /* LaunchScreen.xib in Resources */,
 				D76F58E01AB9445600664AAC /* DetailEarthQuakeViewController.xib in Resources */,
+				D76C664E1ABF98C300CBC10F /* DetailCell.xib in Resources */,
 				D76F58A61AB921C700664AAC /* Images.xcassets in Resources */,
 				D76F58CC1AB924E200664AAC /* EarthQuakeCellTableViewCell.xib in Resources */,
 				D76F58C61AB9239300664AAC /* EarthQuakeList.xib in Resources */,
@@ -428,6 +437,7 @@
 				D76F58D21AB92DC600664AAC /* ColorMagnitudServices.m in Sources */,
 				D76F589B1AB921C700664AAC /* main.m in Sources */,
 				D76F58E81AB94AF800664AAC /* MKPointAnnotation+CustomColor.m in Sources */,
+				D76C664D1ABF98C300CBC10F /* DetailCell.m in Sources */,
 				D76F58E91AB94AF800664AAC /* ZSPinAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

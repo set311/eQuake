@@ -12,4 +12,9 @@
 
 - (void)getMapInformationForEarthquake:(id)earthquakeModel withCallback:(void (^)(id))shapeCallback;
 
+- (void)loadURL:(NSString*)theURL withCallback:(void (^)(NSArray *))earthQuakesInformation;
+
+
+-(UIColor *) getColorForMagnitude: (float) magnitude;
+
 @end

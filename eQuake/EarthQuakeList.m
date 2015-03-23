@@ -8,7 +8,6 @@
 
 #import "EarthQuakeList.h"
 #import "EarthQuakeCellTableViewCell.h"
-#import "ColorMagnitudServices.h"
 
 #define cellName @"EarthQuakeCellTableViewCell"
 
@@ -26,7 +25,6 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
-    self.magnitudColorServices = [ColorMagnitudServices new];
     
     self.title = @"Earth Quakes";
     [self.tableView setDataSource:self];
@@ -46,7 +44,7 @@
     id earthQuakeModel = self.earthQuakes[(NSUInteger) indexPath.row];
     [cell setEarthQuake:earthQuakeModel];
     float magnitud = [[earthQuakeModel valueForKeyPath:@"properties.mag"] floatValue];
-    [cell setMagnitudColor: [self.magnitudColorServices getColorForMagnitude: magnitud]];
+    [cell setMagnitudColor: [self.delegate getColorForMagnitude: magnitud]];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell reloadData];
