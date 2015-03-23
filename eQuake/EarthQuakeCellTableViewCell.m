@@ -22,13 +22,19 @@
 
 -(void)reloadData
 {
-    [self.location setText:[self.earthQuake valueForKeyPath:@"properties.place"]];
+    NSString* placeName = [self.earthQuake valueForKeyPath:@"properties.place"];
+    
+    NSArray* placeNameArray = [placeName componentsSeparatedByString: @","];
+    
+    [self.location setText:placeNameArray[0]];
+    [self.state setText:placeNameArray[1]   ];
     
     [self.magnitud setText:[NSString stringWithFormat: @"%0.2f",
                             [[self.earthQuake valueForKeyPath:@"properties.mag"] floatValue]]];
     
+    
     [self.magnitudIndicator setBackgroundColor:self.magnitudColor];
-    [self.magnitudIndicator.layer setCornerRadius:8];
+    [self.magnitudIndicator.layer setCornerRadius:20];
 }
 
 @end

@@ -12,7 +12,7 @@
 
 
 @property(nonatomic, weak) IBOutlet UILabel* location;
-@property(nonatomic, weak) IBOutlet UILabel* date;
+@property(nonatomic, weak) IBOutlet UILabel* state;
 @property(nonatomic, weak) IBOutlet UILabel* magnitud;
 @property(nonatomic, strong) UIColor* magnitudColor;
 @property(nonatomic, strong) id earthQuake;
