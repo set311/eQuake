@@ -23,6 +23,9 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="8hW-lR-fWA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="291"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="3cL-ec-9Ab"/>
+                    </connections>
                 </mapView>
                 <view contentMode="scaleToFill" id="mRy-GK-E9h" userLabel="header">
                     <rect key="frame" x="0.0" y="288" width="375" height="60"/>

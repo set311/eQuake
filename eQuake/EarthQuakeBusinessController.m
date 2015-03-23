@@ -18,6 +18,7 @@
 @interface EarthQuakeBusinessController()
 
 @property(nonatomic, strong) NSDictionary *geoJSON;
+@property(nonatomic, strong) NSDictionary *detailJSON;
 @property(nonatomic, strong) NSArray *shapes;
 
 @property(nonatomic, strong) dispatch_queue_t queue;
@@ -41,16 +42,15 @@
         self.tempPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"/all_hour.geojson"];
         
         self.magnitudColor = [ColorMagnitudServices new];
-        self.detailView = [DetailEarthQuakeViewController new];
-        [self.detailView setDelegate:self];
         
         self.dayFormat = [[NSDateFormatter alloc] init];
         [self.dayFormat setDateFormat:@"MM/dd/yyyy"];
         
         self.timeFormat = [[NSDateFormatter alloc] init];
         [self.timeFormat setDateFormat:@"HH:mm"];
-
         
+        self.detailView = [DetailEarthQuakeViewController new];
+        [self.detailView setDelegate:self];
     }
     return self;
 }
@@ -63,11 +63,11 @@
     
         if(data) {
             NSError * interpretationError = nil;
-            self.geoJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&interpretationError];
+            self.detailJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&interpretationError];
         
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                double timeValue = [self.geoJSON[@"properties"][@"time"] doubleValue];
+                double timeValue = [self.detailJSON[@"properties"][@"time"] doubleValue];
                                
                 NSDate * completeDate = [NSDate dateWithTimeIntervalSince1970: (timeValue / 1000)];
                 
@@ -76,7 +76,7 @@
                 NSString* time =[self.timeFormat stringFromDate:completeDate];
 ;
                 
-                NSString* gap = [self.geoJSON[@"properties"][@"gap"] description];
+                NSString* gap = [self.detailJSON[@"properties"][@"gap"] description];
                 
                 
                 NSArray* details = @[
@@ -152,8 +152,6 @@
 -(UIViewController*)nextViewControllerWithModel:(id) model
 {
     [self.detailView setEarthQuake:model];
-
-    
     return self.detailView;
 }
 

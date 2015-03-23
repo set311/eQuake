@@ -99,7 +99,7 @@
     
     // Set the type of pin to® draw and the color
     pinView.annotationType = ZSPinAnnotationTypeStandard;
-    pinView.annotationColor = [UIColor redColor];
+    pinView.annotationColor = [annotation isKindOfClass:[MKPointAnnotation class]] ? [((MKPointAnnotation*)annotation) customColor] : [UIColor redColor];
     pinView.canShowCallout = YES;
     
     return pinView;
