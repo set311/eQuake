@@ -42,6 +42,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    for (int i =0; i < [self.mapView.annotations count]; i++) {
+        if ([[self.mapView.annotations objectAtIndex:i] isKindOfClass:[MKPointAnnotation class]]) {
+            [self.mapView removeAnnotation:[self.mapView.annotations objectAtIndex:i]];
+        }
+    }
         [self.delegate getMapInformationForEarthquake: self.earthQuake withCallback: ^(MKShape * shape) {
         if ([shape isKindOfClass:[MKPointAnnotation class]]) {
             
@@ -85,7 +90,7 @@
     if([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    static NSString *defaultPinID = @"identifier";
+    static NSString *defaultPinID = @"StandardIdentifier";
     
     ZSPinAnnotation *pinView = (ZSPinAnnotation *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
     if (pinView == nil){

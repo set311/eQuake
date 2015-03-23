@@ -75,15 +75,18 @@
                 
                 NSString* time =[self.timeFormat stringFromDate:completeDate];
 ;
+                
+                NSString* gap = [self.geoJSON[@"properties"][@"gap"] description];
+                
+                
                 NSArray* details = @[
                                      @{@"key":@"Time",
                                        @"value":time},
                                      @{@"key":@"Date",
                                        @"value":date},
-                                     @{@"key":@"Place",
-                                       @"value":self.geoJSON[@"properties"][@"place"]}
+                                     @{@"key":@"Gap",
+                                @"value":gap}
                                      ];
-                
                     earthQuakesDetail(details);
                     });
                 }
